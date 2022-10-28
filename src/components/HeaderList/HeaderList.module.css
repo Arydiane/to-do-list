@@ -1,0 +1,22 @@
+.header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 1px 1px  5px rgba(0, 0, 0, 0.463);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__icon {
+    height: 2.5rem;
+}
+
+.header__title {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    display: inline;
+    flex-grow: 1;
+    text-align: center;
+}
