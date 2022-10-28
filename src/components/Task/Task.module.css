@@ -1,0 +1,31 @@
+.task__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task__text{
+    padding-left: 0.5rem;
+    flex-basis: 90%;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.task__checked {
+    text-decoration-line: line-through;
+    text-decoration-color: var(--secondary-color);
+}
+
+label {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+
+.task__trash:hover {
+    transform: scale(120%);
+    cursor: pointer;
+}
