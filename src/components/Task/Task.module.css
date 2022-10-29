@@ -20,7 +20,7 @@ input[type="checkbox"] {
 }
 
 label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-left: 0.5rem;
 }
 
@@ -28,4 +28,12 @@ label {
 .task__trash:hover {
     transform: scale(120%);
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+
+    label {
+      font-size: 1rem;
+    }
+  
 }

@@ -5,6 +5,7 @@
     min-height: 10rem;
     text-align: center;
     position: relative;
+    transition: all 0.1s;
 }
 
 .list {
@@ -18,9 +19,9 @@
 }
 
 .viewForm__active {
-    display: block;
+    visibility: visible;
 }
 
 .viewForm__inactive {
-    display: none;
+    visibility: hidden;
 }

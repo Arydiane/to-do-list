@@ -9,7 +9,7 @@
 .form__label {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .form__input {
@@ -18,4 +18,12 @@
     border: none;
     outline-color: var(--primary-color);
     padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    .form__label {
+      font-size: 1rem;
+    }
+  
 }

@@ -3,7 +3,7 @@
   --secondary-color: #d93d76;
   --tertiary-color: #592055;
   /* --bg-color-1:#FAACA8; */
-  --bg-color-1:#f7c4c1;
+  --bg-color-1:#f7d4d3;
   --bg-color-2: #DDD6F3;
 }
 
@@ -18,14 +18,31 @@ body {
   background: linear-gradient(to right, var(--bg-color-1) 0%, var(--bg-color-2) 100%);
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   height: 100vh;
 }
 
-main {
+.App {
   height: 100vh;
   width: 70%;
   min-width: 300px;
-  max-width: 600px;
+
   margin: 3rem auto;
 }
 
+@media screen and (min-width: 768px) {
+  
+  .App {
+    max-width: 600px;
+  }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+  html {
+    font-size: 1.2rem;
+  }
+
+}

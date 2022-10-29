@@ -12,14 +12,21 @@
 }
 
 .header__icon {
-    height: 2.5rem;
+    height: 2rem;
     flex: 1 1 20%;
 }
 
 .header__title {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.5rem 0;
     display: inline;
     flex: 2 1 80%;
     text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+    .header__title {
+        font-size: 1.2rem;
+    }
 }
