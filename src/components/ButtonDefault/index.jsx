@@ -1,8 +1,14 @@
 import styles from './ButtonDefault.module.css'
 
-function ButtonDefault({ children}) {
+function ButtonDefault({ children, click, isDefault = true}) {
     return ( 
-        <button className={styles.buttonDefault}>
+        <button 
+            className={ isDefault 
+                ? styles.buttonDefault 
+                : `${styles.buttonDefault} ${styles.buttonSecundary}`
+            } 
+            onClick={click}
+        >
             {children}
         </button>
      );

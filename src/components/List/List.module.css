@@ -16,3 +16,11 @@
 .list__item {
     padding: 0.5rem;
 }
+
+.viewForm__active {
+    display: block;
+}
+
+.viewForm__inactive {
+    display: none;
+}

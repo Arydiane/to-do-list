@@ -11,6 +11,8 @@
     position: absolute;
     bottom: calc(0% - 1.25rem);
     left: calc((100% - 10rem) / 2);
+
+    z-index: 99;
 }
 
 .buttonDefault:hover {
@@ -18,4 +20,12 @@
     background-color: var(--primary-color);
     color: var(--secondary-color);
     cursor: pointer;
+}
+
+.buttonSecundary {
+    position: static;
+    display: inline-block;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 0px;
 }
