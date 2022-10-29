@@ -1,16 +1,16 @@
+import FooterList from "components/FooterList";
 import HeaderList from "components/HeaderList";
 import List from "components/List";
 
 function App() {
   return (
+
     <div className="App">
-
-      <main>
-        <HeaderList />
-        <List />
-      </main>
-
+      <HeaderList />
+      <List />
+      <FooterList />
     </div>
+
   );
 }
 
