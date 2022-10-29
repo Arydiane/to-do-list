@@ -1,0 +1,21 @@
+.form__container {
+    padding: 3rem 0;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form__input {
+    height: 2rem;
+    width: 70%;
+    border: none;
+    outline-color: var(--primary-color);
+    padding-left: 0.5rem;
+}
