@@ -16,6 +16,16 @@ function List() {
             id: 2,
             description: "Estudar sobre programação",
             isChecked: true
+        },
+        {
+            id: 3,
+            description: "Fazer curso de inglês",
+            isChecked: false
+        },
+        {
+            id: 4,
+            description: "Praticar algoritmos",
+            isChecked: true
         }
     ]
 
@@ -31,9 +41,9 @@ function List() {
     }
 
     const deleteTask = (id) => {
-        setTasksList(tasksList.filter(task => {
+        setTasksList([...tasksList.filter(task => {
             return task.id !== id
-        }))
+        })])
     }
 
 
