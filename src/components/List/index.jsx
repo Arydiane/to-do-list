@@ -1,3 +1,4 @@
+import ButtonDefault from 'components/ButtonDefault';
 import { useState } from 'react';
 import Task from '../Task';
 import styles from './List.module.css'
@@ -54,7 +55,9 @@ function List() {
                         )
                     })}
                 </ul>
-
+                <ButtonDefault>
+                    + Nova Tarefa
+                </ButtonDefault>
             </section>
             <section>
 
