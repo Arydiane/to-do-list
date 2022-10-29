@@ -1,29 +1,33 @@
+import styles from './List.module.css'; 
 import ButtonDefault from 'components/ButtonDefault';
+import NewTask from 'components/NewTask';
 import { useState } from 'react';
 import Task from '../Task';
-import styles from './List.module.css'
+import { v4 as uuidv4 } from 'uuid';
 
 function List() {
+
+    const [viewForm, setViewForm] = useState(false)
 
     //initial tasks
     const tasks = [
         {
-            id: 1,
+            id: uuidv4(),
             description: "Caminhar na praia",
             isChecked: false
         },
         {
-            id: 2,
+            id: uuidv4(),
             description: "Estudar sobre programação",
             isChecked: true
         },
         {
-            id: 3,
+            id: uuidv4(),
             description: "Fazer curso de inglês",
             isChecked: false
         },
         {
-            id: 4,
+            id: uuidv4(),
             description: "Praticar algoritmos",
             isChecked: true
         }
@@ -46,6 +50,11 @@ function List() {
         })])
     }
 
+    function addNewTask(newTask) {
+        setTasksList( [...tasksList, {id: uuidv4(), ...newTask,}])
+        setViewForm(!viewForm)
+    }
+
 
     return (
         <>
@@ -65,12 +74,16 @@ function List() {
                         )
                     })}
                 </ul>
-                <ButtonDefault>
+                <ButtonDefault click={()=> setViewForm(!viewForm)}>
                     + Nova Tarefa
                 </ButtonDefault>
             </section>
-            <section>
-
+            <section 
+                className={ viewForm 
+                ? `${styles.list__container} ${styles.viewForm__active}`
+                : `${styles.list__container} ${styles.viewForm__inactive}` }
+            >
+                <NewTask addNewTask={addNewTask}/>
             </section>
         </>
 
