@@ -1,0 +1,17 @@
+.list__container {
+    background-color: var(--bg-color-2);
+    box-shadow: 1px 1px  5px rgba(0, 0, 0, 0.463);
+    margin: 1rem 0;
+    min-height: 10rem;
+    text-align: center;
+    position: relative;
+}
+
+.list {
+    list-style: none;
+    text-align: left;
+}
+
+.list__item {
+    padding: 0.5rem;
+}
