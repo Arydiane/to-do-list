@@ -4,7 +4,7 @@ import styles from './NewTask.module.css'
 
 function NewTask({addNewTask}) {
 
-    const [newTask, setNewTask] = useState('')
+    const [newTask, setNewTask] = useState(() => { return '' })
 
     const onSubmitNewTask = (event) => {
         event.preventDefault();

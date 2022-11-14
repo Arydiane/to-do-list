@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function List() {
 
-    const [viewForm, setViewForm] = useState(false)
+    const [viewForm, setViewForm] = useState(() => { return false })
 
     //initial tasks
     const tasks = [
@@ -33,7 +33,7 @@ function List() {
         }
     ]
 
-    const [tasksList, setTasksList] = useState(tasks)
+    const [tasksList, setTasksList] = useState(() => { return tasks })
 
     const handleOnChange = (id) => {
         setTasksList(tasksList.map(task => {
