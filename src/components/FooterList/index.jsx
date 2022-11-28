@@ -10,6 +10,8 @@ function FooterList() {
                         <AiFillGithub 
                             className={styles.footer__icon}
                             size="1.5rem"
+                            title='GitHub'
+                            aria-label='GitHub de Arydiane'
                         />
                     </a>
                 </li>
@@ -18,6 +20,8 @@ function FooterList() {
                         <AiFillLinkedin 
                             className={styles.footer__icon} 
                             size="1.5rem"
+                            title='LinkedIn'
+                            aria-label='LinkedIn de Arydiane'
                         />
                     </a>
                 </li>
@@ -25,7 +29,9 @@ function FooterList() {
                     <a href="mailto:arydianejardim@gmail.com"  target="_blank" rel="noreferrer">
                         <AiTwotoneMail 
                             className={styles.footer__icon}
-                             size="1.5rem"
+                            size="1.5rem"
+                            title='E-mail'
+                            aria-label='E-mail de Arydiane'
                         />
                     </a>
                 </li>
