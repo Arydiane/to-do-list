@@ -26,6 +26,9 @@ function Task({ task, handleOnChange, deleteTask }) {
                 size="1.5rem"
                 color="var(--primary-color)"
                 title='Excluir'
+                aria-label='Excluir'
+                tabIndex="0"
+                role="button"
                 onClick={() => deleteTask(task.id)}
             />
         </div>
