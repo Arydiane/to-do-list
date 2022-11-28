@@ -57,7 +57,7 @@ function List() {
 
 
     return (
-        <>
+        <main>
             <section className={styles.list__container}>
                 <ul className={styles.list}>
 
@@ -85,7 +85,7 @@ function List() {
             >
                 <NewTask addNewTask={addNewTask}/>
             </section>
-        </>
+        </main>
 
 
     );
