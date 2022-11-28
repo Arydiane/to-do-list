@@ -24,7 +24,8 @@ function Task({ task, handleOnChange, deleteTask }) {
             <BiTrash
                 className={styles.task__trash}
                 size="1.5rem"
-                color="var(--secondary-color)"
+                color="var(--primary-color)"
+                title='Excluir'
                 onClick={() => deleteTask(task.id)}
             />
         </div>
