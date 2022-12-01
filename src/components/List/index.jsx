@@ -1,39 +1,14 @@
 import styles from './List.module.css'; 
 import ButtonDefault from 'components/ButtonDefault';
 import NewTask from 'components/NewTask';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Task from '../Task';
 import { v4 as uuidv4 } from 'uuid';
 
 function List() {
 
     const [viewForm, setViewForm] = useState(() => { return false })
-
-    //initial tasks
-    const tasks = [
-        {
-            id: uuidv4(),
-            description: "Caminhar na praia",
-            isChecked: false
-        },
-        {
-            id: uuidv4(),
-            description: "Estudar sobre programação",
-            isChecked: true
-        },
-        {
-            id: uuidv4(),
-            description: "Fazer curso de inglês",
-            isChecked: false
-        },
-        {
-            id: uuidv4(),
-            description: "Praticar algoritmos",
-            isChecked: true
-        }
-    ]
-
-    const [tasksList, setTasksList] = useState(() => { return tasks })
+    const [tasksList, setTasksList] = useState([])
 
     const handleOnChange = (id) => {
         setTasksList(tasksList.map(task => {
@@ -54,6 +29,17 @@ function List() {
         setTasksList( [...tasksList, {id: uuidv4(), ...newTask,}])
         setViewForm(!viewForm)
     }
+    //load local storage
+    useEffect(() => {
+        if (localStorage.getItem('to-do-list') !== null){
+            setTasksList(JSON.parse(localStorage.getItem('to-do-list')))
+        }
+    }, [])
+
+    //salve local Storage
+    useEffect(() => {
+        localStorage.setItem('to-do-list', JSON.stringify(tasksList))
+    }, [tasksList])
 
 
     return (
