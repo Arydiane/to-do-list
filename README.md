@@ -8,6 +8,7 @@ To Do List é um site para organizar as suas listas de tarefas. Possui as seguin
 - Componentes Controlados
 - Utilizar o CSS modules
 - Absolute imports
+- Salvar dados no local Storage
 
 ## 💻 Layout  
 
